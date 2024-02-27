@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#instaling nginx server
+apt-get update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.html
+state=$(pgrep nginx)
+if [ -n "$state" ];
+then
+        sudo service nginx restart
+else
+        sudo service nginx start
+fi
+
+
