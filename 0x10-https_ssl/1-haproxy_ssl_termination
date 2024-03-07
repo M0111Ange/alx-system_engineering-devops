@@ -40,7 +40,7 @@ frontend mukundente-frontend
         http-request set-header X_Forwarded-Proto http
         default_backend mukundente-backend
 
-frontend clickviral-frontend-https
+frontend mukundente-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/mukundente.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend mukundente-backend
